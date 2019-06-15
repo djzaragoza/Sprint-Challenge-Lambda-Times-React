@@ -29,6 +29,44 @@ const Container = styled.div`
     width: 1280px;
   }
 `
+const LeftContainer = styled.div `
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: row;
+  flex: 1;
+  font-size: 11px;
+`
+
+const LeftSpan = styled.span `
+  cursor: pointer;
+  margin-right: 25%;
+  font-weight: bold;
+`
+
+const CenterContainer = styled.div `
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex: 3;
+  font-size: 9px;
+`
+
+const CenterSpan = styled.span `
+  cursor: pointer;
+  margin-right: 5%;
+
+  &: last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+`
+
 
 
 
