@@ -64,10 +64,21 @@ const CenterSpan = styled.span `
   &:hover {
     text-decoration: underline;
   }
-
 `
 
+const RightContainer = styled.div `
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  flex: 1;
+  font-size: 11px;
+  font-weight: bold;
+`
 
+const RightSpan = styled.span `
+  cursor: pointer;
+`
 
 
 const TopBar = () => {
