@@ -1,0 +1,3 @@
+1. What are PropTypes used for?  PLease describe why it's important to type check out data in JavaScript.
+
+If a developer was working on a large project to build a feature with many, more complex components.  Say if he were to build the feature, he would need ChildComponents.  On top of that, how would he know ChildComponents needs property message and id to function properly?  He'll need to search for components code for usages of this.props object.  He will also need to figure out what type those properties need to be.  This is where React and proptypes come into play.  The proptypes is essentially a dictionary where you define what props your component needs and what type(s) they should be.
