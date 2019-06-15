@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Tabs from './Tabs';
 import Cards from './Cards';
+import Carousel from './Carousel/Carousel';
 
 // Importing our tab and card data. No need to change anything here.
 import { tabData, cardData } from '../../data';
@@ -18,6 +19,10 @@ export default class Content extends Component {
 
   componentDidMount() {
     // Once the component has mounted, get the data and reflect that data on the state.
+    this.setState({
+      tabs:tabData,
+      cards: cardData, 
+    })
   }
 
   changeSelected = tab => {
