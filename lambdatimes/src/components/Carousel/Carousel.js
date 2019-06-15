@@ -5,23 +5,42 @@ export default class Carousel extends Component {
   constructor(props){
     super(props);
     this.state = {
-
+      images: [],
+      curImg: 0,
     }
   }
   componentDidMount(){
-
+    this.setState({ images: carouselData })
   }
 
   leftClick = () => {
-
+    if (this.state.curImg === 0) {
+      this.setState({
+        curImg: this.state.images.length - 1,
+      })
+    }
+    else {
+      this.setState(prevState => ({
+        curImg: prevState.curImg - 1
+      }))
+    }
   }
 
   rightClick = () => {
-
+  if (this.state.curImg === this.state.images.length - 1) {
+    this.setState({
+      curImg: 0,
+    })
   }
+  else {
+    this.setState(prevState => ({
+      curImg: prevState.curImg + 1,
+    }))
+  }
+}
 
   selectedImage = () => {
-    return <img src={} style={{display: 'block'}} />
+    return <img src={this.state.images[this.state.curImg]} style={{display: 'block'}} alt="" />
   }
   
   render(){
